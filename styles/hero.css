@@ -1,0 +1,46 @@
+#hero {
+  background: url(../assets/images/hero-background.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  & nav {
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    & a {
+      color: var(--text-title);
+      font: var(--button);
+      padding: 0.875rem 1.25rem;
+      background-color: var(--pink-dark);
+      border-radius: 0.5rem;
+      z-index: 1;
+      position: relative;
+      &::before {
+        content: "";
+        background-color: var(--pink-base);
+        position: absolute;
+        border-radius: inherit;
+        inset: 0;
+        z-index: -1;
+        clip-path: circle(0%);
+        transition: clip-path 500ms ease-in-out;
+      }
+      &:hover::before {
+        clip-path: circle(100%);
+      }
+    }
+  }
+  & #hero-content{
+    text-align: center;
+    margin-block: 3rem 2rem;
+    padding-bottom: 12.0625rem;
+    
+    & span{
+      display: inline-block;
+      margin-top: 1rem;
+
+      font: var(--body-sm);
+      color: var(--text-title);
+    }
+  }
+}
