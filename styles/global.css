@@ -49,7 +49,10 @@ body{
 }
 
 .container{
+    
     margin-inline: 1.25rem;
+    max-width: 23.4375rem;
+    margin-inline: auto;
 }
 
 a{

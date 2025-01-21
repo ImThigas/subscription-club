@@ -1,7 +1,30 @@
 #hero {
-  background: url(../assets/images/hero-background.png) no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  &::before{
+    content: "";
+    background-color: var(--pink-low);
+    position: absolute;
+    filter: blur(300px);
+    top: 15.375rem;
+    bottom: 1.375rem;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+  & #hero-background{
+    position: relative;
+    &::after {
+      content: "";
+      background: url(../assets/images/hero-background.png) no-repeat;
+      background-position: center;
+      background-size: cover;
+      inset: 0;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      animation: entry 1.5s 500ms ease forwards;
+    }
+  }
   & nav {
     padding-top: 1.25rem;
     display: flex;
@@ -30,17 +53,64 @@
       }
     }
   }
-  & #hero-content{
+  & #hero-content {
     text-align: center;
     margin-block: 3rem 2rem;
     padding-bottom: 12.0625rem;
-    
-    & span{
+    & h1{
+      opacity: 0;
+      animation: entry 1.5s 1s ease-in-out forwards;
+    }
+    & span {
       display: inline-block;
       margin-top: 1rem;
 
       font: var(--body-sm);
       color: var(--text-title);
+
+      opacity: 0;
+      animation: entry 1.5s 1.5s ease-in-out forwards;
     }
+  }
+  & .container:has(#hero-text){
+    padding-inline: 1.25rem;
+    position: relative;
+  }
+  & #hero-text{
+    padding-block: 5.10375rem;
+    text-align: center;
+    & p{
+      font: var(--body-md);
+      font-weight: 500;
+      color: var(--text-body);
+    }
+    & img{
+      position: absolute;
+      width: 2.5rem;
+      height: auto;
+    }
+    & img:nth-child(2){
+      top: 1.75rem;
+      left: 15.75rem;
+      transform: rotate(15deg);
+    }
+    & img:nth-child(3){
+      top: 9.8125rem;
+      left: .875rem;
+      width: 2rem;
+      transform: rotate(-30deg);
+    }
+    & img:nth-child(4){
+      top: 10.625rem;
+      left: 19.103125rem;
+      transform: rotate(15deg);
+    }
+  }
+}
+
+
+@keyframes entry{
+  to{
+    opacity: 1;
   }
 }
