@@ -1,0 +1,110 @@
+#monthly-kit {
+  & #monthly-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+      & img,
+      h2 {
+        display: inline-block;
+      }
+      & img {
+        width: 1.25rem;
+      }
+    }
+    & span {
+      font: var(--body-sm);
+      color: var(--text-body);
+    }
+  }
+
+  & #monthly-content {
+    display: flex;
+    position: relative;
+    padding-block: 3.5625rem;
+    & img {
+      object-fit: cover;
+      max-width: 9.824375rem;
+    }
+    & span{
+      font: .625rem var(--ff);
+      color: var(--text-body);
+    }
+    & img:nth-child(1){
+      margin-left: 26%;
+      padding-top:  .8rem;
+    }
+    & span:nth-child(2){
+      position: absolute;
+      left: .625rem;
+      top: 2.8rem;
+    }
+    & img:nth-child(3){
+      position: absolute;
+      left: 2.3625rem;
+      top: 4rem;
+    }
+    & span:nth-child(4){
+      position: absolute;
+      left: .4875rem;
+      top: 10.925rem;
+    }
+    & img:nth-child(5){
+      position: absolute;
+      left: 1.6rem;
+      top: 12.0625rem;
+      width: 2.3875rem;
+    }
+    & img:nth-child(6){
+      position: absolute;
+      z-index: -1;
+      left: 2.7rem;
+      top: 13.8rem;
+
+      max-width: 4.680625rem;
+      max-height: 5.3375rem;
+      transform: rotate(-7.55deg);
+    }
+    & img:nth-child(7){
+      position: absolute;
+      z-index: -1;
+      top: 2.5625rem;
+      left: 14.525rem;
+
+      height: 11.25rem;
+      width: 3.625rem;
+      transform: rotate(11.72deg);
+    }
+    & img:nth-child(8){
+      position: absolute;
+      z-index: -2;
+      left: 16.8125rem;
+      top: 4.6875rem;
+
+      width: 3.618125rem;
+      height: 11.275625rem;
+      transform: rotate(22.09deg);
+    }
+    & img:nth-child(9){
+      position: absolute;
+      z-index: -1;
+      left: 15.9rem;
+      top: 15.325rem;
+    }
+    & span:nth-child(10){
+      position: absolute;
+      z-index: -1;
+      left: 13rem;
+      top: 18.9875rem;
+    }
+  }
+
+  & .container:nth-child(2) {
+    margin-inline: 0;
+  }
+}
