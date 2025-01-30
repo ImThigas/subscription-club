@@ -1,0 +1,132 @@
+#subscription {
+    margin-bottom: 6.5rem;
+  #subscription-title {
+    text-align: center;
+    margin-block: 6.5rem 3rem;
+  }
+  #subscription-types {
+    font-family: var(--ff);
+    position: relative;
+    display: grid;
+    animation: subscription-animation 60s ease-in-out infinite forwards;
+    animation-delay: 15s;
+    & .subscription-card {
+      position: relative;
+      background-color: var(--shape-base);
+      border: 1px solid var(--shape-stroke);
+      border-radius: 1.5rem;
+      padding: 2rem 2rem 2rem 1.75rem;
+      .subscription-card-title {
+        margin-bottom: 1.5625rem;
+        & h4 {
+          color: var(--blue-light);
+          font: var(--title-xs);
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+        }
+        & h3 {
+          color: var(--text-title);
+          font: var(--title-md);
+          margin-bottom: 0.5rem;
+          & span {
+            font: var(--title-xs);
+            color: inherit;
+          }
+        }
+        & span {
+          font: var(--body-sm);
+          color: var(--text-label);
+        }
+      }
+      .subscription-card-description {
+        .subscription-card-details {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          .detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            & span {
+              font: var(--body-xs);
+            }
+          }
+        }
+        & a {
+          display: block;
+          text-align: center;
+          background-color: var(--blue-dark);
+          border-radius: 0.5rem;
+          padding-block: 0.75rem;
+          text-decoration: none;
+          color: var(--text-title);
+          font: var(--button);
+          position: relative;
+          z-index: 1;
+          &::before {
+            content: "";
+            background-color: var(--blue-mid);
+            position: absolute;
+            border-radius: inherit;
+            inset: 0;
+            z-index: -1;
+            clip-path: ellipse(0% 0% at 50% 50%);
+            transition: clip-path 700ms ease-in-out;
+          }
+          &:hover::before {
+            clip-path: ellipse(100% 100% at 50% 50%);
+          }
+        }
+      }
+    }
+    & .subscription-card:nth-child(1) {
+      & .subscription-card-title {
+        margin-bottom: 5.1875rem;
+      }
+    }
+    & .subscription-card:nth-child(2) {
+      position: absolute;
+      right: -110%;
+      & .subscription-card-title {
+        margin-bottom: 3.375rem;
+        & h4 {
+          color: var(--pink-light);
+        }
+      }
+      & a {
+        background-color: var(--pink-dark);
+        &::before {
+          background-color: var(--pink-base);
+        }
+      }
+    }
+    & .subscription-card:nth-child(3) {
+      position: absolute;
+      right: -220%;
+    }
+  }
+}
+
+@keyframes subscription-animation{
+    0%{
+        left: 0%;
+    }
+    20%{
+        left: 0;
+    }
+    30%{
+        left: -110%;
+    }
+    50%{
+        left: -110%;
+    }
+    60%{
+        left: -220%;
+    }
+    80%{
+        left: -220%;
+    }
+    100%{
+        left: 0%;
+    }
+}

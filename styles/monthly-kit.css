@@ -1,9 +1,10 @@
 #monthly-kit {
+  margin-bottom: 5.5rem;
   & #monthly-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-block: 6.5rem 3rem;
     & div {
       display: flex;
       align-items: center;
@@ -27,40 +28,58 @@
     display: flex;
     position: relative;
     padding-block: 3.5625rem;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+
+      background: #3f0f41;
+      opacity: 0.5;
+      filter: blur(130px);
+      z-index: -1;
+    }
+
     & img {
       object-fit: cover;
       max-width: 9.824375rem;
     }
-    & span{
-      font: .625rem var(--ff);
+    & span {
+      font: 0.625rem var(--ff);
       color: var(--text-body);
     }
-    & img:nth-child(1){
-      margin-left: 26%;
-      padding-top:  .8rem;
+    & img:nth-child(1) {
+      margin-left: 25%;
+      padding-top: 0.8rem;
     }
-    & span:nth-child(2){
+    & span:nth-child(2) {
       position: absolute;
-      left: .625rem;
+      z-index: -1;
+      left: 0.625rem;
       top: 2.8rem;
     }
-    & img:nth-child(3){
+    & img:nth-child(3) {
       position: absolute;
+      z-index: -1;
       left: 2.3625rem;
       top: 4rem;
     }
-    & span:nth-child(4){
+    & span:nth-child(4) {
       position: absolute;
-      left: .4875rem;
+      z-index: -1;
+      left: 0.4875rem;
       top: 10.925rem;
     }
-    & img:nth-child(5){
+    & img:nth-child(5) {
       position: absolute;
+      z-index: -1;
       left: 1.6rem;
       top: 12.0625rem;
       width: 2.3875rem;
     }
-    & img:nth-child(6){
+    & img:nth-child(6) {
       position: absolute;
       z-index: -1;
       left: 2.7rem;
@@ -70,36 +89,36 @@
       max-height: 5.3375rem;
       transform: rotate(-7.55deg);
     }
-    & img:nth-child(7){
+    & img:nth-child(7) {
       position: absolute;
       z-index: -1;
       top: 2.5625rem;
-      left: 14.525rem;
+      left: 14.225rem;
 
       height: 11.25rem;
       width: 3.625rem;
       transform: rotate(11.72deg);
     }
-    & img:nth-child(8){
+    & img:nth-child(8) {
       position: absolute;
       z-index: -2;
-      left: 16.8125rem;
+      left: 16.5125rem;
       top: 4.6875rem;
 
       width: 3.618125rem;
       height: 11.275625rem;
       transform: rotate(22.09deg);
     }
-    & img:nth-child(9){
+    & img:nth-child(9) {
       position: absolute;
       z-index: -1;
-      left: 15.9rem;
+      left: 15.6rem;
       top: 15.325rem;
     }
-    & span:nth-child(10){
+    & span:nth-child(10) {
       position: absolute;
       z-index: -1;
-      left: 13rem;
+      left: 12.7rem;
       top: 18.9875rem;
     }
   }
