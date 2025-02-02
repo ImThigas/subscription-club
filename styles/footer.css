@@ -1,0 +1,71 @@
+footer {
+  background: url(../assets/images/book-trace-background-mobile.png) top center
+    no-repeat;
+  background-size: cover;
+  width: 23.4375rem;
+  & .footer {
+    margin: 6.125rem 2rem 2rem 2rem;
+    & .footer-title {
+      margin-bottom: 2.5rem;
+      display: grid;
+      & img:nth-child(1) {
+        max-width: 9.91375rem;
+        justify-self: center;
+      }
+      & .line {
+        height: 2px;
+        width: 100%;
+        background-color: var(--shape-stroke);
+        margin-block: 0.75rem;
+      }
+      & .footer-icons {
+        display: flex;
+        justify-content: space-around;
+        & .svg {
+          display: flex;
+          align-items: center;
+          padding: 0.5rem;
+          border-radius: 50%;
+          transition: background-color 250ms ease-in-out;
+          & svg {
+            & path {
+              transition: fill 250ms ease-in-out;
+            }
+          }
+          &:hover {
+            background-color: var(--blue-low);
+
+            & svg {
+              & path {
+                fill: #f8f8f8;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      & h4 {
+        font: var(--title-xs);
+        color: var(--text-body);
+        margin-bottom: 1.25rem;
+      }
+      & .links {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+      }
+      & a{
+        font: var(--link);
+        color: var(--blue-light);
+        transition: color 250ms ease-in-out;
+        &:hover{
+            color: #F8F8F8;
+        }
+      }
+    }
+  }
+}
