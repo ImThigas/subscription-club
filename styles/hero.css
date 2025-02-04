@@ -1,6 +1,6 @@
 #hero {
   position: relative;
-  &::before{
+  &::before {
     content: "";
     background-color: var(--pink-low);
     position: absolute;
@@ -11,7 +11,7 @@
     right: 0;
     z-index: -2;
   }
-  & #hero-background{
+  & #hero-background {
     position: relative;
     &::after {
       content: "";
@@ -57,12 +57,11 @@
     text-align: center;
     margin-block: 3rem 2rem;
     padding-bottom: 12.0625rem;
-    & h1{
+    & h1 {
       opacity: 0;
       animation: entry 1.5s 1s ease-in-out forwards;
     }
     & span {
-      display: inline-block;
       margin-top: 1rem;
 
       font: var(--body-sm);
@@ -72,35 +71,35 @@
       animation: entry 1.5s 1.5s ease-in-out forwards;
     }
   }
-  & .container:has(#hero-text){
+  & .container:has(#hero-text) {
     padding-inline: 1.25rem;
     position: relative;
   }
-  & #hero-text{
+  & #hero-text {
     padding-block: 5.10375rem;
     text-align: center;
-    & p{
+    & p {
       font: var(--body-md);
       font-weight: 500;
       color: var(--text-body);
     }
-    & img{
+    & img {
       position: absolute;
       width: 2.5rem;
       height: auto;
     }
-    & img:nth-child(2){
+    & img:nth-child(2) {
       top: 1.75rem;
       left: 15.75rem;
       transform: rotate(15deg);
     }
-    & img:nth-child(3){
+    & img:nth-child(3) {
       top: 9.8125rem;
-      left: .875rem;
+      left: 0.875rem;
       width: 2rem;
       transform: rotate(-30deg);
     }
-    & img:nth-child(4){
+    & img:nth-child(4) {
       top: 10.625rem;
       left: 19.103125rem;
       transform: rotate(15deg);
@@ -108,9 +107,115 @@
   }
 }
 
-
-@keyframes entry{
-  to{
+@keyframes entry {
+  to {
     opacity: 1;
+  }
+}
+
+@media (width >= 80rem) {
+  #hero {
+    &::before {
+      filter: blur(12000px);
+      opacity: 70%;
+      top: 40rem;
+    }
+    & nav {
+      padding-top: 3.5rem;
+    }
+    & #hero-content {
+      margin-block: 10.25rem 6rem;
+      padding-bottom: 29.375rem;
+      text-align: center;
+      & span {
+        margin-top: 2rem;
+        font: var(--body-lg);
+      }
+    }
+
+    & .container:has(#hero-text) {
+      padding-inline: 0;
+      margin-inline: 7.5rem;
+      &:hover {
+        & p {
+          & span {
+            opacity: 1;
+
+            & strong {
+              color: var(--blue-light);
+            }
+          }
+        }
+        & img:nth-child(2) {
+          scale: 1;
+        }
+        & img:nth-child(3) {
+          scale: 1;
+        }
+        & img:nth-child(4) {
+          scale: 1;
+        }
+      }
+    }
+    & #hero-text {
+      padding: 7.125rem 2rem 9.75rem 2rem;
+      & p {
+        font: var(--subtitle);
+        color: var(--text-body);
+        font-weight: unset;
+        & span{
+          opacity: 0.5;
+        }
+        & span:nth-child(1) {
+          transition: opacity 200ms;
+          & strong {
+            transition: color 200ms;
+          }
+        }
+        & span:nth-child(2) {
+          transition: opacity 200ms;
+          transition-delay: 0.5s;
+          & strong {
+            transition: color 200ms;
+            transition-delay: 0.5s;
+          }
+        }
+        & span:nth-child(3) {
+          transition: opacity 200ms;
+          transition-delay: 1s;
+          & strong {
+            transition: color 200ms;
+            transition-delay: 1s;
+          }
+        }
+      }
+      & img:nth-child(2) {
+        width: 5.5rem;
+        top: 2.07%;
+        left: 46.68%;
+        transform: rotate(20.76deg);
+        scale: 0;
+        transition: scale 200ms;
+      }
+      & img:nth-child(3) {
+        top: 58.99%;
+        left: 10.5%;
+        width: 5rem;
+        transform: rotate(99.47deg);
+        scale: 0;
+        transition: scale 200ms;
+        transition-delay: 0.5s;
+      }
+      & img:nth-child(4) {
+        top: 59.04%;
+        left: unset;
+        right: 0.155%;
+        width: 4.5rem;
+        transform: rotate(-14.48deg);
+        scale: 0;
+        transition: scale 200ms;
+        transition-delay: 1s;
+      }
+    }
   }
 }
