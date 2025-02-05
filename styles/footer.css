@@ -78,13 +78,15 @@ footer {
     background: url(../assets/images/book-trace-background.png) top center
       no-repeat;
     background-size: cover;
-    width: 100%;
+    width: unset;
     padding-block: 5.625rem 3.125rem;
     & .footer {
+      width: 100%;
       margin-inline: 10rem;
       display: flex;
       justify-content: space-between;
       & .footer-title {
+        margin-bottom: 0;
         & img:nth-child(1) {
           max-width: 20rem;
         }
