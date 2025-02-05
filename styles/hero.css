@@ -113,7 +113,7 @@
   }
 }
 
-@media (width >= 80rem) {
+@media (width >= 80em) {
   #hero {
     &::before {
       filter: blur(12000px);

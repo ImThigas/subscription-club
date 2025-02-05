@@ -127,3 +127,117 @@
     margin-inline: 0;
   }
 }
+
+@media (width >= 80em) {
+  #monthly-kit {
+    margin-bottom: 17.375rem;
+    & #monthly-title {
+      margin-block: 14.6875rem 5.5rem;
+      & h2 {
+        font: var(--title-sm);
+        color: var(--text-title);
+      }
+      & span {
+        font: var(--body-md);
+      }
+    }
+    & .container {
+      display: flex;
+      justify-content: center;
+      & #monthly-content {
+        padding-block: 8.375rem 10.5625rem;
+        padding-inline: 20rem;
+        max-width: 80em;
+        &::before {
+          filter: blur(350px);
+        }
+
+        & img {
+          margin-left: 0;
+          max-width: 29.1875rem;
+        }
+        & span {
+          font: var(--body-md);
+          color: var(--text-title);
+        }
+        & img:nth-child(1) {
+          padding-top: 0;
+          scale: 1;
+        }
+
+        & img, span{
+          top: 30%;
+          left: 50%;
+          scale: 0;
+          transition: top 500ms ease-in-out, left 500ms ease-in-out, scale 500ms ease-in-out;
+        }
+        & img:nth-child(3) {
+          width: 10.9375rem;
+          height: 1.875rem;
+        }
+        & img:nth-child(5){
+          width: 6.5625rem;
+        }
+        & img:nth-child(6){
+          max-width: 10.875rem;
+            max-height: 15.875rem;
+        }
+        & img:nth-child(7){
+          height: 33.5rem;
+          width: 10.75rem;
+        }
+        & img:nth-child(8){
+          height: 33.5rem;
+          width: 10.75rem;
+        }
+        & img:nth-child(9){
+          width: 9.0625rem;
+        }
+        &:hover {
+          & img, span{
+            scale: 1;
+          }
+          & span:nth-child(2) {
+            left: 9.86%;
+            top: 8.61%;
+          }
+          & img:nth-child(3) {
+            left: 17.26%;
+            top: 12.55%;
+          }
+          & span:nth-child(4) {
+            left: 13.89%;
+            top: 50.46%;
+          }
+          & img:nth-child(5) {
+            left: 15.55%;
+            top: 54.35%;
+          }
+          & img:nth-child(6) {
+            left: 20.08%;
+            top: 63.86%;
+            transform: rotate(-8deg);
+          }
+          & img:nth-child(7) {
+            top: 5%;
+            left: 65.94%;
+            transform: rotate(12deg);
+          }
+          & img:nth-child(8) {
+            left: 76.82%;
+            top: 16.21%;
+            transform: rotate(22deg);
+          }
+          & img:nth-child(9) {
+            left: 74.49%;
+            top: 71.43%;
+          }
+          & span:nth-child(10) {
+            left: 68.29%;
+            top: 87.8%;
+          }
+        }
+      }
+    }
+  }
+}

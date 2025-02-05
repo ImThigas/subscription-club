@@ -87,7 +87,7 @@ a{
     display: block;
 }
 
-@media (width >= 80rem){
+@media (width >= 80em){
     h1{
         font: var(--title-lg);
     }
