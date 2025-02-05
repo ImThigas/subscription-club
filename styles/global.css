@@ -91,6 +91,9 @@ a{
     h1{
         font: var(--title-lg);
     }
+    h2{
+        font: var(--title-sm);
+    }
     body{
         display: initial;
         overflow-x: hidden;

@@ -1,5 +1,5 @@
 #subscription {
-    margin-bottom: 6.5rem;
+  margin-bottom: 6.5rem;
   #subscription-title {
     text-align: center;
     margin-block: 6.5rem 3rem;
@@ -87,8 +87,24 @@
     & .subscription-card:nth-child(2) {
       position: absolute;
       right: -110%;
+      background-color: var(--shape-hover);
+      & img:nth-child(1) {
+        position: absolute;
+        top: -3.3rem;
+      }
       & .subscription-card-title {
         margin-bottom: 3.375rem;
+        & span:nth-child(2) {
+          position: absolute;
+          padding: 0.5625rem 1.25rem;
+          top: 1.494375rem;
+          right: 1.526875rem;
+          border-radius: 20px;
+          background-color: var(--shape-stroke);
+          font: var(--tag);
+          color: var(--text-body);
+          text-transform: uppercase;
+        }
         & h4 {
           color: var(--pink-light);
         }
@@ -107,26 +123,156 @@
   }
 }
 
-@keyframes subscription-animation{
-    0%{
-        left: 0%;
+@keyframes subscription-animation {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0;
+  }
+  30% {
+    left: -110%;
+  }
+  50% {
+    left: -110%;
+  }
+  60% {
+    left: -220%;
+  }
+  80% {
+    left: -220%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@media (width >= 80em) {
+  #subscription {
+    position: relative;
+    background: url(../assets/images/pricing-background.png) cover;
+    margin-bottom: 18.875rem;
+    &::after {
+      content: "";
+      background: url(../assets/images/pricing-background.png) no-repeat center /
+        cover;
+      background-color: var(--blue-low);
+      position: absolute;
+      filter: blur(500px);
+      opacity: 0.5;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -2;
     }
-    20%{
-        left: 0;
+    & #subsctiption-title {
+      margin-block: 12.125rem 3.5rem;
     }
-    30%{
-        left: -110%;
+    & #subscription-types {
+      padding-block: 5.125rem 6.6875rem;
+      animation: none;
+      display: flex;
+      justify-content: center;
+
+      & .subscription-card:nth-child(2),
+      & .subscription-card:nth-child(3) {
+        position: relative;
+        right: unset;
+      }
+      & .subscription-card:nth-child(1) {
+        left: 14.31%;
+        top: 0;
+        scale: 0;
+        transition: top 500ms ease-in-out, left 500ms ease-in-out,
+          scale 500ms ease-in-out, transform 500ms ease-in-out,
+          background-color 500ms ease-in-out;
+        & img {
+          transition: transform 300ms ease-in-out;
+        }
+        & img:nth-child(1) {
+          position: absolute;
+          top: -1rem;
+          left: -1.5rem;
+          width: 1.625rem;
+        }
+        & img:nth-child(2) {
+          position: absolute;
+          left: -2rem;
+          top: 1rem;
+          width: 0.8125rem;
+        }
+      }
+      & .subscription-card:nth-child(2) {
+        z-index: 2;
+      }
+      & .subscription-card:nth-child(3) {
+        left: -14.31%;
+        top: 0;
+        scale: 0;
+        transition: top 500ms ease-in-out, left 500ms ease-in-out,
+          scale 500ms ease-in-out, transform 500ms ease-in-out,
+          background-color 500ms ease-in-out;
+        & img {
+          transition: transform 300ms ease-in-out;
+        }
+        & img:nth-child(3) {
+          position: absolute;
+          right: -1.5rem;
+          bottom: -1.5rem;
+          width: 1.4375rem;
+        }
+        & img:nth-child(4) {
+          position: absolute;
+          right: 0.5rem;
+          bottom: -2rem;
+          width: 0.6875rem;
+        }
+      }
+      &:hover {
+        & .subscription-card:nth-child(1) {
+          left: 0%;
+          top: 2.431875rem;
+          transform: rotate(-8deg);
+          scale: 1;
+        }
+        & .subscription-card:nth-child(3) {
+          left: 0%;
+          top: 2.431875rem;
+          transform: rotate(8deg);
+
+          scale: 1;
+        }
+      }
+      & .subscription-card:nth-child(1):hover {
+        background-color: var(--shape-hover);
+        z-index: 3;
+        scale: 1.05;
+        & img {
+          transform: rotate(30deg);
+        }
+      }
+      & .subscription-card:nth-child(3):hover {
+        background-color: var(--shape-hover);
+        z-index: 3;
+        scale: 1.05;
+        & img {
+          transform: rotate(30deg);
+        }
+      }
+      & .subscription-card {
+        scale: 1;
+        transition: scale 500ms ease-in-out;
+        & svg {
+          transition: transform 500ms ease-in-out;
+        }
+      }
+      & .subscription-card:hover {
+        scale: 1.05;
+        & svg {
+          transform: rotate(30deg);
+        }
+      }
     }
-    50%{
-        left: -110%;
-    }
-    60%{
-        left: -220%;
-    }
-    80%{
-        left: -220%;
-    }
-    100%{
-        left: 0%;
-    }
+  }
 }
