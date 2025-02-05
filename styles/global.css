@@ -52,6 +52,10 @@ body{
     overflow-x: hidden;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 .container{
     margin-inline: 1.25rem;
     max-width: 23.4375rem;
