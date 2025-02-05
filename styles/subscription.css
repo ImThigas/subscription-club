@@ -151,7 +151,7 @@
   #subscription {
     position: relative;
     background: url(../assets/images/pricing-background.png) cover;
-    margin-bottom: 18.875rem;
+    margin-bottom: 8rem;
     &::after {
       content: "";
       background: url(../assets/images/pricing-background.png) no-repeat center /
