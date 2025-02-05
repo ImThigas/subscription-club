@@ -2,10 +2,13 @@ footer {
   background: url(../assets/images/book-trace-background-mobile.png) top center
     no-repeat;
   background-size: cover;
-  width: 26.5625rem;
+  width: 40rem;
+  display: flex;
+  justify-content: center;
   & .footer {
     margin: 6.125rem 2rem 2rem 2rem;
     & .footer-title {
+      max-width: 23.4375rem;;
       margin-bottom: 2.5rem;
       display: grid;
       & img:nth-child(1) {
